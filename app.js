@@ -1,13 +1,15 @@
 
 var pikePlace = {
-  min: 1,
-  max: 2,
-  avg: 3,
-  time: 4,
+  min: 17,
+  max: 88,
+  avg: 5.2,
+  hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'],
+
   // What other properties might you need to keep track of?
   getRandom: function(min, max) {
-    return Math.random() * ((max - min) + min);
+    return Math.random() * ((this.max - this.min) + min)) .toFixed(0);
   },
+  cookiesPerHour: [],
   // other methods to aggregate data...
   render: function() {
     // render your object data to the DOM as an unordered list of data points!!
