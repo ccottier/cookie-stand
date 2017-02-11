@@ -1,4 +1,5 @@
 
+//Global Variables estab//
 var pikePlace = {
   min: 17,
   max: 88,
@@ -9,9 +10,9 @@ var pikePlace = {
   // random customer per hour number generator
   getRandom: function (min, max) {
     //could also use: return Math.floor(Math.random() * (max - min + 1)) + min;
-    return Math.random() * Math.round((this.max - this.min) + this.min));
-
+    return Math.round(Math.round) * (max - min + 1) + min;
   },
+
   cookiesPerHour: [],
   totalCookies = 0,
   // cookiesPerHour generator
