@@ -5,7 +5,8 @@ body {
 h1 {
   text-align: center;
   color: #117766;
-  font-family: 'Maven Pro', sans-serif;
+  /*font-family: 'Maven Pro', sans-serif;*/
+  font-family: 'Orbitron', sans-serif;
 }
 
 h2 {
@@ -20,7 +21,7 @@ h2 {
 }
 
 div h2 {
-  margin-left: 45px;
+  margin-left: 120px;
   /*height: 160px;
   width: 160px;*/
   /*text-align: center;*/
@@ -30,8 +31,12 @@ div h2 {
 }
 
 ul {
-  margin-left: 45px;
+  margin-left: 120px;
+  font-kerning: 75px;
+}
 
+li {
+  font-kerning: 30px;
 }
 
 }
@@ -45,20 +50,19 @@ head {
 
 }
 
-ul {
-  color: ;
-  font-size: ;
-  font-family: ;
+
 }
 
 p {
   color: ;
   font-size: ;
   font-family: ;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 
 
-
+/*
 Color Palette Image
 
 #112222
@@ -71,4 +75,4 @@ Color Palette Image
 #117766
 #0088cc
 #00aaee
-#88bb22 vibrant
+#88bb22 vibrant*/
