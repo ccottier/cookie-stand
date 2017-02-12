@@ -9,13 +9,34 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: #88bb22;
   font-family: Helvetica, sans-serif;
 
 }
+#quote {
+  color: #88bb22;
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+}
 
-h2 {
-  color: black;
+div h2 {
+  margin-left: 45px;
+  /*height: 160px;
+  width: 160px;*/
+  /*text-align: center;*/
+  /*font-size: ;*/
+  /*vertical-align: middle;
+  display: table-cell;*/
+}
+
+ul {
+  margin-left: 45px;
+
+}
+
+}
+h3 {
+  color: #;
   font-family: Georgia, sans-serif;
 }
 
