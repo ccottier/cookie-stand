@@ -1,3 +1,74 @@
-h1 {
-  
+body {
+  background-color: white;
 }
+
+h1 {
+  text-align: center;
+  color: #117766;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+h2 {
+  color: #88bb22;
+  font-family: Helvetica, sans-serif;
+
+}
+#quote {
+  color: #88bb22;
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+}
+
+div h2 {
+  margin-left: 45px;
+  /*height: 160px;
+  width: 160px;*/
+  /*text-align: center;*/
+  /*font-size: ;*/
+  /*vertical-align: middle;
+  display: table-cell;*/
+}
+
+ul {
+  margin-left: 45px;
+
+}
+
+}
+h3 {
+  color: #;
+  font-family: Georgia, sans-serif;
+}
+
+
+head {
+
+}
+
+ul {
+  color: ;
+  font-size: ;
+  font-family: ;
+}
+
+p {
+  color: ;
+  font-size: ;
+  font-family: ;
+}
+
+
+
+Color Palette Image
+
+#112222
+#225555
+#116699
+#3388aa
+#779944 dull
+
+#002222
+#117766
+#0088cc
+#00aaee
+#88bb22 vibrant
