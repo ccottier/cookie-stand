@@ -24,6 +24,8 @@ var pikePlace = {
   },
   //call function to generate cookie totals for Pike Place
 
+  cookiesPerHour: [],
+  totalCookies: 0,
 
   render: function() {
     this.populate()
@@ -186,7 +188,7 @@ var alkiBeach = {
     for(i = 0; i < this.hourOfDay.length; i++) {
       var randomNum = this.getRandom();
       this.cookiesPerHour.push(randomNum);
-      this.totalCookies += this.rand;
+      this.totalCookies += this.rand;//this line might be wrong!! total is working//
     }
   },
   //call function to generate cookie totals for Pike Place
@@ -204,4 +206,7 @@ var alkiBeach = {
   }
 };
 
-alkiBeach.render()
+alikBeach.render()
+
+//Need to fix, alki is not showing data now for some reason, look to last sumit, also toatls are not showing up
+//add tables instead of lists
