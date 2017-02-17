@@ -1,209 +1,126 @@
-//Global Variables estab//
-var pikePlace = {
-  min: 17,
-  max: 88,
-  avgCookiesCustomer: 5.2,
+// global variable
+hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'];
+locations ['pikePlace', 'seaTac', 'southCenter', 'bellevueSquare','alkiBeach'];
+var grandTotalCookies = 0;
 
-  hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'],
 
-  // random customer per hour number generator
-  getRandom: function(min, max) {
-    //could also use: return Math.floor(Math.random() * (max - min + 1)) + min;
-    return Math.round((Math.random() * (this.max - this.min + 1) + this.min));
-  },
-
-  cookiesPerHour: [],
-  totalCookies: 0,
-  // cookiesPerHour generator
-  populate: function() {
-    for(i = 0; i < this.hourOfDay.length; i++) {
-      var randomNum = this.getRandom();
-      this.cookiesPerHour.push(randomNum);
-      this.totalCookies += this.rand;
-    }
-  },
-  //call function to generate cookie totals for Pike Place
-
-  cookiesPerHour: [],
-  totalCookies: 0,
-
-  render: function() {
-    this.populate()
-    for (i = 0; i < this.hourOfDay.length; i++) {
-      var pikePlaceEl = document.getElementById('pikePlace');
-      var liRandomNumEl = document.createElement('li');
-      console.log(liRandomNumEl);
-      liRandomNumEl.textContent = this.hourOfDay[i] + ':' + ' ' + this.cookiesPerHour[i];
-      pikePlaceEl.appendChild(liRandomNumEl);
-    }
-  }
+// Obj Constructor Function: Object & Properties (key = value)
+function Store (storeLocation, min, max, avgCookiesCustomer, cookiesPerHour, totalCookies, cookiesPerHour) {
+  this.storeLocation = storeLocation;
+  this.min = min;
+  this.max = max;
+  this.avgCookiesCustomer = avgCookiesCustomer;
+  this.cookiesPerHour = cookiesPerHour[];
+  this.totalCookies = 0;
+  this.cookiesPerHour = 0;
+  // this.hourlyCookies = []; ???
 };
 
-pikePlace.render()
+  this.render = function(){
+    var locations = document.getElementById('locations');
+    var liElement = document.createElement('li')
 
-//Global Variables estab//
-var seaTac = {
-  min: 6,
-  max: 24,
-  avgCookiesCustomer: 1.2,
-
-  hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'],
-
-  // random customer per hour number generator
-  getRandom: function(min, max) {
-    //could also use: return Math.floor(Math.random() * (max - min + 1)) + min;
-    return Math.round((Math.random() * (this.max - this.min + 1) + this.min));
-  },
-
-  cookiesPerHour: [],
-  totalCookies: 0,
-  // cookiesPerHour generator
-  populate: function() {
-    for(i = 0; i < this.hourOfDay.length; i++) {
-      var randomNum = this.getRandom();
-      this.cookiesPerHour.push(randomNum);
-      this.totalCookies += this.rand;
-    }
-  },
-  //call function to generate cookie totals for Pike Place
-
-
-  render: function() {
-    this.populate()
-    for (i = 0; i < this.hourOfDay.length; i++) {
-      var seaTacEl = document.getElementById('seaTac');
-      var liRandomNumEl = document.createElement('li');
-      console.log(liRandomNumEl);
-      liRandomNumEl.textContent = this.hourOfDay[i] + ':' + ' ' + this.cookiesPerHour[i];
-      seaTacEl.appendChild(liRandomNumEl);
-    }
   }
-};
 
-seaTac.render()
+  // Obj Constructor Methods / Formulas:
+    // random customer per hour number generator
+    this.getrandomCookiesHr: function() {
+      return (Math.random() * (this.max - this.min + 1) + this.min);
+    },
 
+    // cookiesPerHour generator
+    this.cookiesPerHour = function() {
+      return Math.floor(this.getrandomCookiesHr(this.max, this.min) * this.avgCookiesCustomer);
+    };
+    // populate: function() {
+    //   for(i = 0; i < this.hourOfDay.length; i++) {
+    //     var hourlyCookies = Math.floor(this.getrandomCookiesHr() * this.avgCookiesCustomer);
+    //     this.cookiesPerHour.push(hourlyCookies);
+    //     this.totalCookies += hourlyCookies;
+    //   }
+    // },
+    // call function to generate cookie totals for Pike Place
 
-//Global Variables estab//
-var southCenter = {
-  min: 11,
-  max: 38,
-  avgCookiesCustomer: 1.9,
+    storeLocationEl: document.getElementById('storeLocation'),
 
-  hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'],
+    render: function() {
+      this.populate();
+      for (i = 0; i < this.hourOfDay.length; i++) {
+        var liRandomNumEl = document.createElement('li');
+        console.log(liRandomNumEl);
+        liRandomNumEl.textContent = this.hourOfDay[i] + ':' + ' ' + this.cookiesPerHour[i];
+        this.pikePlaceEl.appendChild(liRandomNumEl);
+      };
 
-  // random customer per hour number generator
-  getRandom: function(min, max) {
-    //could also use: return Math.floor(Math.random() * (max - min + 1)) + min;
-    return Math.round((Math.random() * (this.max - this.min + 1) + this.min));
-  },
-
-  cookiesPerHour: [],
-  totalCookies: 0,
-  // cookiesPerHour generator
-  populate: function() {
-    for(i = 0; i < this.hourOfDay.length; i++) {
-      var randomNum = this.getRandom();
-      this.cookiesPerHour.push(randomNum);
-      this.totalCookies += this.rand;
+      var liTotalCookiesEL = document.createElement('li');
+      liTotalCookiesEL.textContent = 'Total Cookies:' + this.totalCookies;
+      this.storeLocationEl.appendChild(liTotalCookiesEL);
     }
-  },
-  //call function to generate cookie totals for Pike Place
+  };
+
+  storeLocation.render()
 
 
-  render: function() {
-    this.populate()
-    for (i = 0; i < this.hourOfDay.length; i++) {
-      var southCenterEl = document.getElementById('southCenter');
-      var liRandomNumEl = document.createElement('li');
-      console.log(liRandomNumEl);
-      liRandomNumEl.textContent = this.hourOfDay[i] + ':' + ' ' + this.cookiesPerHour[i];
-      southCenterEl.appendChild(liRandomNumEl);
-    }
-  }
-};
+// Obj constructor saves new stores info into new variables
+var pikePlace = new Store('Pike Place Market', 17, 88, 5.2);
+pikePlace.render();
 
-southCenter.render()
+var seaTac = new Store('SeaTac', 6, 24, 1.2);
+seaTac.render();
 
+var southCenter = new Store('South Center', 11, 38, 1.9);
+southCenter.render();
 
-//Global Variables estab//
-var bellevueSquare = {
-  min: 20,
-  max: 48,
-  avgCookiesCustomer: 3.3,
+var bellevueSquare = new Store('Bellevue Square', 20, 48, 3.3);
+bellevueSquare.render();
 
-  hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'],
-
-  // random customer per hour number generator
-  getRandom: function(min, max) {
-    //could also use: return Math.floor(Math.random() * (max - min + 1)) + min;
-    return Math.round((Math.random() * (this.max - this.min + 1) + this.min));
-  },
-
-  cookiesPerHour: [],
-  totalCookies: 0,
-  // cookiesPerHour generator
-  populate: function() {
-    for(i = 0; i < this.hourOfDay.length; i++) {
-      var randomNum = this.getRandom();
-      this.cookiesPerHour.push(randomNum);
-      this.totalCookies += this.rand;
-    }
-  },
-  //call function to generate cookie totals for Pike Place
+var alkiBeach = new Store('Alki Beach', 3, 24, 2.6);
+alkiBeach.render();
 
 
-  render: function() {
-    this.populate()
-    for (i = 0; i < this.hourOfDay.length; i++) {
-      var bellevueSquareEl = document.getElementById('bellevueSquare');
-      var liRandomNumEl = document.createElement('li');
-      console.log(liRandomNumEl);
-      liRandomNumEl.textContent = this.hourOfDay[i] + ':' + ' ' + this.cookiesPerHour[i];
-      bellevueSquareEl.appendChild(liRandomNumEl);
-    }
-  }
-};
-
-bellevueSquare.render()
 
 
-//Global Variables estab//
-var alkiBeach = {
-  min: 20,
-  max: 48,
-  avgCookiesCustomer: 3.3,
-
-  hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'],
-
-  // random customer per hour number generator
-  getRandom: function(min, max) {
-    //could also use: return Math.floor(Math.random() * (max - min + 1)) + min;
-    return Math.round((Math.random() * (this.max - this.min + 1) + this.min));
-  },
-
-  cookiesPerHour: [],
-  totalCookies: 0,
-  // cookiesPerHour generator
-  populate: function() {
-    for(i = 0; i < this.hourOfDay.length; i++) {
-      var randomNum = this.getRandom();
-      this.cookiesPerHour.push(randomNum);
-      this.totalCookies += this.rand;//this line might be wrong!! total is working//
-    }
-  },
-  //call function to generate cookie totals for Pike Place
 
 
-  render: function() {
-    this.populate()
-    for (i = 0; i < this.hourOfDay.length; i++) {
-      var alkiBeachEl = document.getElementById('alkiBeach');
-      var liRandomNumEl = document.createElement('li');
-      console.log(liRandomNumEl);
-      liRandomNumEl.textContent = this.hourOfDay[i] + ':' + ' ' + this.cookiesPerHour[i];
-      alkiBeachEl.appendChild(liRandomNumEl);
-    }
-  }
-};
-
-alikBeach.render()
+// code block example from lab 6:
+// var southCenter = {
+//   min: 11,
+//   max: 38,
+//   avgCookiesCustomer: 1.9,
+//
+//   hourOfDay: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'],
+//   // random customer per hour number generator
+//   getRandom: function() {
+//     //could also use: return Math.floor(Math.random() * (max - min + 1)) + min;
+//     return (Math.random() * (this.max - this.min + 1) + this.min);
+//   },
+//
+//   cookiesPerHour: [],
+//   totalCookies: 0,
+//   // cookiesPerHour generator
+//   populate: function() {
+//     for(i = 0; i < this.hourOfDay.length; i++) {
+//       var hourlyCookies = Math.floor(this.getRandom() * this.avgCookiesCustomer);
+//       this.cookiesPerHour.push(hourlyCookies);
+//       this.totalCookies += hourlyCookies;
+//     }
+//   },
+//
+//
+//   southCenterEl: document.getElementById('southCenter'),
+//
+//   render: function() {
+//     this.populate();
+//     for (i = 0; i < this.hourOfDay.length; i++) {
+//       var liRandomNumEl = document.createElement('li');
+//       console.log(liRandomNumEl);
+//       liRandomNumEl.textContent = this.hourOfDay[i] + ':' + ' ' + this.cookiesPerHour[i];
+//       this.southCenterEl.appendChild(liRandomNumEl);
+//     };
+//
+//     var liTotalCookiesEL = document.createElement('li');
+//     liTotalCookiesEL.textContent = 'Total Cookies:' + this.totalCookies;
+//     this.southCenterEl.appendChild(liTotalCookiesEL);
+//   }
+// };
+// southCenter.render()
