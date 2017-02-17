@@ -207,6 +207,3 @@ var alkiBeach = {
 };
 
 alikBeach.render()
-
-//Need to fix, alki is not showing data now for some reason, look to last sumit, also toatls are not showing up
-//add tables instead of lists
