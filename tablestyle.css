@@ -1,0 +1,17 @@
+#storeTable {
+  text-align: center;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+td {
+  border: 10px;
+}
+
+th {
+  border: 10px;
+}
+
+h1 {
+  border: 10;
+}
