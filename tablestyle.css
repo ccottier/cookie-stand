@@ -1,17 +1,43 @@
+.centered {
+  /*centered: table;*/
+  max-width: 100%;
+}
+
 #storeTable {
-  text-align: center;
+  margin: 0 auto;
   font-family: sans-serif;
-  text-align: center;
+  width: 70%;
+  border: 2px double black;
+  align-content: center;
+  padding: 20px;
+  border-spacing: 5px;
+  background-color: #b3b3b3;
+  table-layout: center;
+}
+
+tr {
+  vertical-align: center;
+
 }
 
 td {
-  border: 10px;
+  text-align: left;
+  border: 2px solid;
+  padding: 10px;
+  /*text-emphasis: bold;*/
+  /*want to make only column header bold*/
 }
 
 th {
-  border: 10px;
+  border: 30px;
 }
 
-h1 {
-  border: 10;
+tr nth child (even) {
+  background-color: #f2f2f2;
+  /*not working, this is for zebra striped table */
+}
+
+tfoot {
+  text-align: center;
+  padding-top: 10px;
 }
