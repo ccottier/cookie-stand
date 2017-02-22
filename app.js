@@ -127,26 +127,6 @@ function makeTotalsRow() {
   }
 }
 
-// function makeTotalsRow() {
-//   var footerRow = document.createElement('tfoot');
-//   storeTable.appendChild(footerRow);
-//   var tableRow = document.createElement('tr');
-//   tableRow.textContent = 'Hourly Compounded Total Sales';
-//   footerRow.appendChild(tableRow);
-//   var tdElement;
-//   var grandTotalHr = 0;
-//   var totalPerHour = 0;
-//   for(var i = 0; i < hourOfDay.length; i++) {
-//     for(var l = 0; l < locations.length; l++) {
-//       totalPerHour = totalPerHour + locations[l].cookiesSoldPerHour[i];
-//       grandTotalHr += locations[l].cookiesSoldPerHour[i];
-//     }
-//     tdElement = document.createElement('td');
-//     tdElement.textContent = grandTotalHr;
-//     tableRow.appendChild(tdElement);
-//   }
-// }
-
 makeHeaderRow()
 makeColumnHeader()
 makeTotalsRow()

@@ -3,7 +3,7 @@
   max-width: 100%;
 }
 
-section {
+table {
   /*centers the table!!!*/
   margin: 0 auto;
   font-family: sans-serif;
@@ -11,16 +11,20 @@ section {
   /*border: 2px double black;*/
   align-content: center;
   padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 70px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-top: 70px;
   border-spacing: 5px;
   background-color: #b3b3b3;
   table-layout: center;
 }
 
-/*form {
-  align-items: center;
-}*/
+fieldset {
+  margin: 15px;
+  display: inline-block;
+  padding: 15px;
+}
+
 
 td {
   text-align: center;
@@ -32,19 +36,11 @@ td {
 
 th {
   border: 30px;
+  padding-top: 30px;
 }
 
 tr {
   text-align: center;
   padding-top: 15px;
   border: 2px black;
-
-}
-
-tfoot {
-  border-style: dashed;
-}
-
-tr {
-  border-style: dashed;
 }
