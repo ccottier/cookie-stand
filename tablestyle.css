@@ -3,18 +3,24 @@
   max-width: 100%;
 }
 
-#storeTable {
+section {
   /*centers the table!!!*/
   margin: 0 auto;
   font-family: sans-serif;
   width: 70%;
   /*border: 2px double black;*/
   align-content: center;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 70px;
   border-spacing: 5px;
   background-color: #b3b3b3;
   table-layout: center;
 }
+
+/*form {
+  align-items: center;
+}*/
 
 td {
   text-align: center;
@@ -32,4 +38,13 @@ tr {
   text-align: center;
   padding-top: 15px;
   border: 2px black;
+
+}
+
+tfoot {
+  border-style: dashed;
+}
+
+tr {
+  border-style: dashed;
 }

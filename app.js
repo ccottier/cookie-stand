@@ -103,13 +103,16 @@ function makeColumnHeader() {
     storeTable.appendChild(tableRow);
   }
 }
-//
+
 function makeTotalsRow() {
   var footerRow = document.createElement('tfoot');
   storeTable.appendChild(footerRow);
   var tableRow = document.createElement('tr');
-  tableRow.textContent = 'Hourly Compounded Total Sales';
+  var tdLabel = document.createElement('td');
+  tdLabel.textContent = 'Hourly Compounded Total Sales';
+  tableRow.appendChild(tdLabel);
   footerRow.appendChild(tableRow);
+  var tableData = document.createElement('td');
   var tdElement;
   var grandTotalHr = 0;
   var totalPerHour = 0;
@@ -124,23 +127,46 @@ function makeTotalsRow() {
   }
 }
 
+// function makeTotalsRow() {
+//   var footerRow = document.createElement('tfoot');
+//   storeTable.appendChild(footerRow);
+//   var tableRow = document.createElement('tr');
+//   tableRow.textContent = 'Hourly Compounded Total Sales';
+//   footerRow.appendChild(tableRow);
+//   var tdElement;
+//   var grandTotalHr = 0;
+//   var totalPerHour = 0;
+//   for(var i = 0; i < hourOfDay.length; i++) {
+//     for(var l = 0; l < locations.length; l++) {
+//       totalPerHour = totalPerHour + locations[l].cookiesSoldPerHour[i];
+//       grandTotalHr += locations[l].cookiesSoldPerHour[i];
+//     }
+//     tdElement = document.createElement('td');
+//     tdElement.textContent = grandTotalHr;
+//     tableRow.appendChild(tdElement);
+//   }
+// }
+
 makeHeaderRow()
 makeColumnHeader()
 makeTotalsRow()
 
+// generate random # of customers
+// Store.prototype. = function() {
+//   return Math.floor(Math.random() * ((this.min - this.min + 1)) + this.min);
+// }
 
-
+//Forms
 //followed example in class below to add form
-  // var formEl = document.getElementById('form-data');
-  // formEl.addEventListner('submit', function(event) {
-  //   event.preventDefault();
-  //   var storeName = parseInt(event.target.storeName.value);
-  //   var min = parseInt(event.target.min.value);
-  //   var max = parseInt(event.target.max.value);
-  //   var avgSale = parseInt(event.target.avgSale.value);
-  //
-  // new Store = (storeName, min, max, avgSale);
-  // });
+  var formEl = document.getElementById('form-data');
+  formEl.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var storeName = parseInt(event.target.storeName.value);
+    var min = parseInt(event.target.min.value);
+    var max = parseInt(event.target.max.value);
+    var avgSale = parseInt(event.target.avgSale.value);
+  new Store(storeName, min, max, avgSale);
+  });
 
 
 // Code from Lab 06 for reference
