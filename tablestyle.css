@@ -1,0 +1,35 @@
+.centered {
+  /*centered: table;*/
+  max-width: 100%;
+}
+
+#storeTable {
+  /*centers the table!!!*/
+  margin: 0 auto;
+  font-family: sans-serif;
+  width: 70%;
+  /*border: 2px double black;*/
+  align-content: center;
+  padding: 20px;
+  border-spacing: 5px;
+  background-color: #b3b3b3;
+  table-layout: center;
+}
+
+td {
+  text-align: center;
+  border: 2px solid;
+  padding: 10px;
+  text-emphasis: bold;
+  /*want to make only column header bold*/
+}
+
+th {
+  border: 30px;
+}
+
+tr {
+  text-align: center;
+  padding-top: 15px;
+  border: 2px black;
+}
