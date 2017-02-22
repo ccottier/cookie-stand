@@ -13,16 +13,21 @@ table {
   padding-left: 20px;
   padding-right: 40px;
   padding-bottom: 40px;
-  padding-top: 70px;
+  padding-top: 20px;
   border-spacing: 5px;
   background-color: #b3b3b3;
   table-layout: center;
+  background-image: url(spirulina-water.jpg);
+  background-size: cover;
+  opacity: .5;
 }
 
 fieldset {
   margin: 15px;
   display: inline-block;
   padding: 15px;
+  max-width: 100%;
+  text-align: center;
 }
 
 
