@@ -11,8 +11,11 @@ h1 {
   font-size: 55px;
   line-height: 40px;
 }
-nav {
-  
+nav li {
+  display: inline-block;
+  padding: 10px 40px;
+  font-size: 25px;
+  font-kerning: 10px;
 }
 
 h2 {
@@ -20,18 +23,23 @@ h2 {
   font-family: Helvetica, sans-serif;
 }
 
-strong {
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 75px;
+.brand-name {
+  font-family: 'Marcellus SC', serif;
+  font-size: 100px;
   letter-spacing: 215x;
+  color: #565fe2;
+  line-height: 55px;
 }
+
 #quote {
   color: #88bb22;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   font-size: 35px;
   line-height: 35px;
-  background-color: #63ccf9;
+  background-color: #565fe2;
+  border-style: double;
+  /*background-color: #63ccf9;*/
   /*background-blend-mode: soft-light;*/
   margin-top: 10px;
   padding-top: 20px;
@@ -92,8 +100,8 @@ p {
   /*color: ;
   font-size: ;
   font-family: ;*/
-  margin-left: 120px;
-  margin-right: 120px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 

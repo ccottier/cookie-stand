@@ -3,18 +3,33 @@
   max-width: 100%;
 }
 
-#storeTable {
+table {
   /*centers the table!!!*/
   margin: 0 auto;
   font-family: sans-serif;
   width: 70%;
   /*border: 2px double black;*/
   align-content: center;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-top: 20px;
   border-spacing: 5px;
   background-color: #b3b3b3;
   table-layout: center;
+  background-image: url(spirulina-water.jpg);
+  background-size: cover;
+  opacity: .5;
 }
+
+fieldset {
+  margin: 15px;
+  display: inline-block;
+  padding: 15px;
+  max-width: 100%;
+  text-align: center;
+}
+
 
 td {
   text-align: center;
@@ -26,6 +41,7 @@ td {
 
 th {
   border: 30px;
+  padding-top: 30px;
 }
 
 tr {
