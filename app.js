@@ -140,15 +140,23 @@ makeTotalsRow()
 //Forms
 
 var formEl = document.getElementById('form-data');
+var storeTable = document.getElementById('storeTable');
+
 formEl.addEventListener('submit', function(event) {
   event.preventDefault();
-  var location = event.target.location.value;
+  var storeName = event.target.l.value;
   var min = parseInt(event.target.min.value);
   var max = parseInt(event.target.max.value);
   var avg = parseInt(event.target.avg.value);
 
-  new Cookieshop(location, min, max, avg);
-
+// this made table disapear
+  // new Store(storeName, min, max, avgSale) {
+  //   this.storeName = storeName;
+  //   this.min = min;
+  //   this.max = max;
+  //   this.avgSale = avgSale;
+  //   allStores.push(this);
+  // }
 clearFields(event);
 });
 
