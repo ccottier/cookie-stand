@@ -19,17 +19,21 @@ table {
   table-layout: center;
   background-image: url(spirulina-water.jpg);
   /*background-size: cover;*/
-  opacity: .7;
+  opacity: .75;
 }
 
 fieldset {
   margin: 15px;
-  display: inline-block;
+  padding: 15px;
+  display: block;
   padding: 15px;
   max-width: 100%;
   text-align: center;
 }
 
+legend {
+  display: block;
+}
 
 td {
   text-align: center;

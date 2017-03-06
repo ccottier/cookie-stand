@@ -136,20 +136,31 @@ makeTotalsRow()
 //   return Math.floor(Math.random() * ((this.min - this.min + 1)) + this.min);
 // }
 
+
 //Forms
 //followed example in class below to add form
-  var formEl = document.getElementById('form-data');
-  formEl.addEventListener('submit', function(event) {
-    event.preventDefault();
-    var storeName = parseInt(event.target.storeName.value);
-    var min = parseInt(event.target.min.value);
-    var max = parseInt(event.target.max.value);
-    var avgSale = parseInt(event.target.avgSale.value);
-  new Store(storeName, min, max, avgSale);
-  });
-
-
-// Code from Lab 06 for reference
+var formEl = document.getElementById('form-data');
+//
+// function formSubmit(event) {
+//   event.preventDefault();
+//   console.log(event);
+//
+//   // storeFormEl.addEventListener('submit', function(event) {
+//   //   event.preventDefault();
+//
+    var newStoreName = parseInt(event.target.storeName.value);
+    var newMin = parseInt(event.target.min.value);
+    var newMax = parseInt(event.target.max.value);
+    var newAvgSale = parseInt(event.target.avgSale.value);
+    var newStore = newStore(newStoreName, newMin, newMax, newAvgSale);
+//
+//     newStore.generateCookiesPerHour();
+//     newStore.render();
+//
+//   });
+//
+// console.log('User pressed submit!');
+// // Code from Lab 06 for reference
 
 // //Global Variables estab//
 // var pikePlace = {

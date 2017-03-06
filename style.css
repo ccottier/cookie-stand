@@ -28,7 +28,7 @@ h2 {
   font-size: 100px;
   letter-spacing: 215x;
   color: #565fe2;
-  line-height: 55px;
+  line-height: 75px;
 }
 
 #quote {
@@ -104,6 +104,14 @@ p {
   margin-right: 150px;
 }
 
+legend {
+  margin: 0 auto;
+  display: block;
+}
+
+legend div {
+  display: inline-block;
+}
 
 /*
 Color Palette Image
