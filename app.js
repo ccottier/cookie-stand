@@ -138,30 +138,57 @@ makeTotalsRow()
 
 
 //Forms
-
 var formEl = document.getElementById('form-data');
 var storeTable = document.getElementById('storeTable');
 
-formEl.addEventListener('submit', function(event) {
-  event.preventDefault();
-  var storeName = event.target.l.value;
+// formEl.addEventListener('submit', function(event) {
+//   event.preventDefault();
+
+  //New Store Creation on form
+function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+
+  var storeName = event.target.storeName.value;
   var min = parseInt(event.target.min.value);
   var max = parseInt(event.target.max.value);
   var avg = parseInt(event.target.avg.value);
+  var newCookieStore = new cookieStore(storeName, min, max, avgSale);
 
-// this made table disapear
-  // new Store(storeName, min, max, avgSale) {
-  //   this.storeName = storeName;
-  //   this.min = min;
-  //   this.max = max;
-  //   this.avgSale = avgSale;
-  //   allStores.push(this);
-  // }
-clearFields(event);
-});
+  newCookieShop.renderCookiesPerHour();
+  newCookieShop.alternate();
+
+  event.target.storeName.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avgSale.value = null;
+
+  // Access Totals Row, Delete Totals Row, and Recreate Totals Row, By Calling it Again
+var totalsTR = document.getElementById('totalsTR');
+  totalsTR.remove(1);
+  getTotals();
+}
 
 button.addEventListener('click', handleButtonClick);
 form.addEventListener('submit', handleFormSubmit);
+
+// this made table disapear
+//   new Store(storeName, min, max, avgSale) {
+//     this.storeName = storeName;
+//     this.min = min;
+//     this.max = max;
+//     this.avgSale = avgSale;
+//     allStores.push(this);
+//   }
+//   newStore.renderCookiesPerHour();
+//   newStore.alternate();
+// clearFields(event);
+// });
+//
+// button.addEventListener('click', handleButtonClick);
+// form.addEventListener('submit', handleFormSubmit);
+
+
 // //followed example in class below to add form
 // var formEl = document.getElementById('form-data');
 // //
