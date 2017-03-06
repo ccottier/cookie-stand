@@ -35,6 +35,10 @@ legend {
   display: block;
 }
 
+/*legend div {
+  text-align: center;
+}*/
+
 td {
   text-align: center;
   border: 2px solid;

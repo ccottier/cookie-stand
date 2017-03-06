@@ -59,11 +59,12 @@ div h2 {
 }
 
 ul {
-  font-kerning: 75px;
+  font-kerning: 15px;
   text-align: center;
   list-style-type: none;
-  letter-spacing: 7px;
+  letter-spacing: 3px;
   padding-left: 0;
+  display: block;
 }
 
 #image {
@@ -92,7 +93,9 @@ h3 {
     margin-top: 10px;
     opacity: .7;
 }
-
+title {
+  background-image: url(algae.jpg);
+}
 
 }
 
@@ -111,6 +114,19 @@ legend {
 
 legend div {
   display: inline-block;
+}
+
+div .images {
+  display: block;
+  margin-bottom: 10px;
+}
+
+images {
+  float: left;;
+}
+
+.info {
+  text-align: center;
 }
 
 /*

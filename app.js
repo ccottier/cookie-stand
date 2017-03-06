@@ -138,27 +138,44 @@ makeTotalsRow()
 
 
 //Forms
-//followed example in class below to add form
+
 var formEl = document.getElementById('form-data');
-//
-// function formSubmit(event) {
-//   event.preventDefault();
-//   console.log(event);
-//
-//   // storeFormEl.addEventListener('submit', function(event) {
-//   //   event.preventDefault();
-//
-    var newStoreName = parseInt(event.target.storeName.value);
-    var newMin = parseInt(event.target.min.value);
-    var newMax = parseInt(event.target.max.value);
-    var newAvgSale = parseInt(event.target.avgSale.value);
-    var newStore = newStore(newStoreName, newMin, newMax, newAvgSale);
-//
-//     newStore.generateCookiesPerHour();
-//     newStore.render();
-//
+formEl.addEventListener('submit', function(event) {
+  event.preventDefault();
+  var location = event.target.location.value;
+  var min = parseInt(event.target.min.value);
+  var max = parseInt(event.target.max.value);
+  var avg = parseInt(event.target.avg.value);
+
+  new Cookieshop(location, min, max, avg);
+
+clearFields(event);
+});
+
+button.addEventListener('click', handleButtonClick);
+form.addEventListener('submit', handleFormSubmit);
+// //followed example in class below to add form
+// var formEl = document.getElementById('form-data');
+// //
+// // function formSubmit(event) {
+// //   event.preventDefault();
+// //   console.log(event);
+// //
+//   formSubmitEl.addEventListener('submit', function(event) {
+//     event.preventDefault();
+// //
+//     var newStoreName = parseInt(event.target.storeName.value);
+//     var newMin = parseInt(event.target.min.value);
+//     var newMax = parseInt(event.target.max.value);
+//     var newAvgSale = parseInt(event.target.avgSale.value);
+//     var newStore = newStore(newStoreName, newMin, newMax, newAvgSale);
+// //
+// //     newStore.generateCookiesPerHour();
+// //     newStore.render();
+// //
 //   });
-//
+
+// formSubmit.addEventListener('submit', handleFormSubmit);
 // console.log('User pressed submit!');
 // // Code from Lab 06 for reference
 
