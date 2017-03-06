@@ -2,7 +2,9 @@
   /*centered: table;*/
   max-width: 100%;
 }
-
+h1 {
+  text-align: center;
+}
 table {
   /*centers the table!!!*/
   margin: 0 auto;
@@ -23,10 +25,9 @@ table {
 }
 
 fieldset {
-  margin: 15px;
+  margin: 30px;
   padding: 15px;
   display: block;
-  padding: 15px;
   max-width: 100%;
   text-align: center;
 }
@@ -35,9 +36,9 @@ legend {
   display: block;
 }
 
-/*legend div {
+legend div {
   text-align: center;
-}*/
+}
 
 td {
   text-align: center;
