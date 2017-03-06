@@ -18,8 +18,8 @@ table {
   background-color: #b3b3b3;
   table-layout: center;
   background-image: url(spirulina-water.jpg);
-  background-size: cover;
-  opacity: .5;
+  /*background-size: cover;*/
+  opacity: .7;
 }
 
 fieldset {
