@@ -2,7 +2,9 @@
   /*centered: table;*/
   max-width: 100%;
 }
-
+h1 {
+  text-align: center;
+}
 table {
   /*centers the table!!!*/
   margin: 0 auto;
@@ -18,18 +20,25 @@ table {
   background-color: #b3b3b3;
   table-layout: center;
   background-image: url(spirulina-water.jpg);
-  background-size: cover;
-  opacity: .5;
+  /*background-size: cover;*/
+  opacity: .75;
 }
 
 fieldset {
-  margin: 15px;
-  display: inline-block;
+  margin: 30px;
   padding: 15px;
+  display: block;
   max-width: 100%;
   text-align: center;
 }
 
+legend {
+  display: block;
+}
+
+legend div {
+  text-align: center;
+}
 
 td {
   text-align: center;
