@@ -7,6 +7,7 @@ var hourOfDay = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm'];
 var locations = [];
 //added this line, might need to delete
 // var grandTotal = [];
+var table;
 
 var storeTable = document.getElementById('storeTable');
 var salesInput = document.getElementById('salesInput');
@@ -136,7 +137,14 @@ makeTotalsRow()
 //   return Math.floor(Math.random() * ((this.min - this.min + 1)) + this.min);
 // }
 
+function renderNew(storeName, min, max, avgSale) {
+  table = document.getElementById('table');
 
+  store.min = min;
+  store.max = max;
+  store.avgSale = avgSale;
+
+}
 //Forms
 var formEl = document.getElementById('form-data');
 var storeTable = document.getElementById('storeTable');
@@ -145,18 +153,23 @@ var storeTable = document.getElementById('storeTable');
 //   event.preventDefault();
 
   //New Store Creation on form
-function handleFormSubmit(event) {
+  document.getElementById('newStore').addEventListener('submit', function handleFormSubmit(event) {
     event.preventDefault();
+    var exists = false;
     console.log(event);
 
+
+  var elSubmit = document.getElementById('submit');
   var storeName = event.target.storeName.value;
   var min = parseInt(event.target.min.value);
   var max = parseInt(event.target.max.value);
   var avg = parseInt(event.target.avg.value);
-  var newCookieStore = new cookieStore(storeName, min, max, avgSale);
+  // var Store = new Store(storeName, min, max, avgSale);
 
-  newCookieShop.renderCookiesPerHour();
-  newCookieShop.alternate();
+  newStore.renderCookiesPerHour();
+  // newStore.alternate();
+  newStore.render();
+
 
   event.target.storeName.value = null;
   event.target.min.value = null;
@@ -167,11 +180,12 @@ function handleFormSubmit(event) {
 var totalsTR = document.getElementById('totalsTR');
   totalsTR.remove(1);
   getTotals();
-}
+});
 
-button.addEventListener('click', handleButtonClick);
-form.addEventListener('submit', handleFormSubmit);
-
+// elSubmit.addEventListener('click', handleButtonClick);
+// elSubmit.addEventListener('submit', handleFormSubmit);
+  // event.preventDefault();
+  // console.log(event);
 // this made table disapear
 //   new Store(storeName, min, max, avgSale) {
 //     this.storeName = storeName;
